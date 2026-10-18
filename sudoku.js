@@ -506,7 +506,7 @@ function message(msg, isGood){
 		$(".messageBox span").css({"top" : "calc(50% - "+(hei/2)+"px"});
 	}
 	if(msg == undefined){return;}
-	$("body").on("touchstart.msg",function(e){
+	$("body").off("click.msg").on("click.msg",function(e){
 		var origin = e.target;
 		if($(origin).hasClass("big") || $(origin).text() == "Quit"){
 			return
